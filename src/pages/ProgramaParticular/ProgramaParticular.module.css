@@ -1,0 +1,170 @@
+.notFound {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notFound > a {
+  font-size: larger;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.descTab {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.descImage {
+  flex: 1;
+}
+
+.descText {
+  flex: 1.2;
+}
+
+.detTab {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.detRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.detCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.detRow > a {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 0.2rem 0;
+
+  gap: 0.2rem;
+}
+
+.detRow > h6 {
+  color: #00000080;
+}
+
+.reqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+}
+
+.reqList li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 0.15em;
+  color: green;
+}
+
+.files {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+  gap: 0.5rem;
+}
+
+.dlButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.dlButton {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subscribe label {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.subscribe input {
+  width: 100%;
+  min-width: 200px;
+}
+
+.subscribe button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-secondary);
+  border: 0;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .detTab {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .descTab {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .descText {
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 576px) {
+  .detTab {
+    grid-template-columns: 1fr;
+  }
+
+  .media {
+    align-self: flex-start;
+  }
+
+  .subscribe {
+    flex-direction: column;
+    align-items: normal;
+  }
+}

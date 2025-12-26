@@ -1,0 +1,202 @@
+.main {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.banners {
+  width: 100%;
+  background-image: url("/images/bg/b3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-primary);
+
+  border-radius: 0 0 75px 75px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  padding: 2rem;
+  padding-bottom: 6rem;
+}
+
+.mainBanner {
+  font-size: x-large;
+  font-weight: bold;
+
+  width: 100%;
+  max-width: 700px;
+}
+
+.mainBanner > p {
+  font-size: small;
+  font-weight: initial;
+}
+
+.subBanner {
+  position: relative;
+
+  width: 100%;
+  max-width: 410px;
+  height: auto;
+}
+
+.subBanner > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  border-radius: 25px;
+}
+
+.subdate {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-25%, 50%);
+
+  text-transform: uppercase;
+  background-color: var(--color-secondary);
+  text-align: center;
+  width: 100px;
+  font-weight: bold;
+  padding: 15px 0;
+  border-radius: 50%;
+}
+
+.resena {
+  width: 90%;
+  transform: translate(0, -15%);
+  background-color: white;
+  padding: 2rem;
+
+  box-shadow: 1px 1px 10px #00000020;
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.resena h4 {
+  font-size: 110%;
+}
+
+.resena p {
+  font-size: 95%;
+  line-height: 2;
+  color: #000000d1;
+}
+
+.resenaLink {
+  display: inline-block;
+  padding: 1.5rem;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.resenaBtnIcon {
+  font-size: xx-large;
+  color: white;
+
+  animation-name: pulse;
+  animation-duration: 1s; /* Full cycle takes 2 seconds */
+  animation-iteration-count: infinite; /* Loop forever */
+  animation-timing-function: ease-in-out; /* Smooth start and end */
+}
+
+.programLinks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  max-width: 1000px;
+  padding: 0 1.5rem;
+  margin: 2rem auto;
+}
+
+.programTarget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 0.5rem;
+
+  box-shadow: 1px 1px 10px #00000020;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.programTarget p {
+  line-height: 1.6;
+  color: #000000d1;
+}
+
+.programIcon {
+  font-size: xx-large;
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Original size */
+  }
+  50% {
+    transform: scale(1.2); /* Grow to 20% larger */
+  }
+  100% {
+    transform: scale(1); /* Shrink back to original size */
+  }
+}
+
+@media (min-width: 992px) {
+  .banners {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5rem 7rem;
+    gap: 7rem;
+    border-radius: 0 0 150px 150px;
+  }
+
+  .mainBanner {
+    max-width: 650px;
+  }
+
+  .subBanner {
+    max-width: 296px;
+  }
+}
+
+@media (max-width: 992px) {
+  .resena {
+    transform: translate(0, -5%);
+  }
+  .programLinks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .programLinks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .subBanner {
+    max-width: 410px;
+  }
+}

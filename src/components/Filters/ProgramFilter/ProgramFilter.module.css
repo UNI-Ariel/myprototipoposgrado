@@ -1,0 +1,31 @@
+.filterContainer {
+  margin: 2rem 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filterContainer > button {
+  padding: 0.4rem 1rem;
+  font-weight: bold;
+  background-color: rgba(117, 117, 117);
+  color: white;
+  border: 0;
+  min-width: 7rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #00000080;
+  cursor: pointer;
+}
+
+.filterContainer > button:hover {
+  background-color: var(--color-primary);
+}
+
+.filterContainer > button.active {
+  background-color: var(--color-secondary);
+}
+
+.column {
+  flex-direction: column;
+}

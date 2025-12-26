@@ -1,0 +1,10 @@
+.banner {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  border-radius: 0 0 50px 50px;
+  padding: 5rem 0;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+}

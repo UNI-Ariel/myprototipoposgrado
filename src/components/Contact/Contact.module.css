@@ -1,0 +1,88 @@
+.aside {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.5rem;
+  z-index: 30;
+}
+
+/* Contenedor de botones secundarios */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.closed {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+/* Botones */
+.aside a,
+.robot,
+.toggle {
+  padding: 0.7rem 0.8rem;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 0.5);
+}
+
+/* Colores */
+.aside a:nth-child(2) {
+  background-color: #0207ff;
+}
+
+.aside a:nth-child(3) {
+  background: radial-gradient(
+    circle at 20% 130%,
+    #fdf497 0%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.aside a:nth-child(4) {
+  background-color: #25d366;
+}
+
+.toggle,
+.robot {
+  background-color: white;
+  color: black;
+}
+
+.robot {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Iconos */
+.icon {
+  font-size: 1.8em;
+}
+
+@media (max-width: 572px) {
+  .icon {
+    font-size: 1.2em;
+  }
+}

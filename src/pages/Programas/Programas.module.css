@@ -1,0 +1,31 @@
+.main{
+  min-height: 100vh;
+}
+
+.banner {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  border-radius: 0 0 50px 50px;
+  padding: 5rem 0;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.content {
+  display: flex;
+  justify-content: end;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.leftFilter {
+  max-width: 10rem;
+  padding: 0 2rem;
+}

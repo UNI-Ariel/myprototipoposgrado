@@ -1,0 +1,188 @@
+.navbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-primary);
+  height: 90px;
+  padding: 0 2.5rem;
+
+  position: relative;
+}
+
+.burger {
+  display: none;
+}
+
+.logo {
+  min-width: 2rem;
+  width: 250px;
+  height: 43px;
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.links > a {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding: 0 1rem;
+}
+
+.submenucontainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  gap: 0.4rem;
+
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.links > a:hover,
+.submenucontainer:hover {
+  background-color: var(--color-primary);
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: -0.35rem;
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  border: 1px solid var(--color-primary);
+
+  display: none;
+  z-index: 30;
+}
+
+.active {
+  background-color: lightgray;
+}
+
+.icon {
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.submenucontainer:hover > .icon {
+  transform: rotate(180deg);
+}
+
+.submenucontainer:hover > .submenu {
+  display: flex;
+}
+
+.sublink {
+  padding: 0.2rem 1rem;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.sublink:hover {
+  background-color: lightgrey;
+}
+
+.burgerClose {
+  display: none;
+  padding: 0 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  color: inherit;
+}
+
+.burgerClose > span {
+  padding-bottom: 0.4rem;
+  font-size: larger;
+}
+
+.button {
+  padding: 0.8rem;
+  background-color: transparent;
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+}
+
+.searchBox {
+  position: relative;
+}
+
+.animate {
+  z-index: 10;
+  transform: translate(0, 0);
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.animate.hidden {
+  opacity: 0;
+  transform: translate(0, -300%);
+  pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+  .burger {
+    display: block;
+  }
+
+  .burgerClose {
+    display: flex;
+  }
+
+  .active {
+    color: #000;
+  }
+
+  .submenucontainer {
+    justify-content: start;
+  }
+
+  .links {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: 0.5rem;
+
+    height: 100vh;
+    background-color: var(--color-primary);
+    color: white;
+
+    z-index: 10;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+  }
+
+  .links.open {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .links a,
+  .submenucontainer {
+    height: auto;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .links > a:hover,
+  .submenucontainer:hover {
+    background-color: white;
+    color: #000;
+  }
+}
